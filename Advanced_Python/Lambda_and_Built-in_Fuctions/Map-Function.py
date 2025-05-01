@@ -31,6 +31,7 @@ sonuc =list(map(Kareal,Sayilar))
 
 
 
+
 sonuc =list(map(lambda sayi: sayi** 2 ,Sayilar))
 sonuc=list(map(int,Sayilar_str))
 sonuc=list(map(str.upper,isimler))
