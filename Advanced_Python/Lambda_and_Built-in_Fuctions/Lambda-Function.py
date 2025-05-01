@@ -26,8 +26,10 @@ def myFunc(n):
 
 carpma2=myFunc(2)
 carmpa3=myFunc(3)
+carmpa5=myFunc(5)
 
 
 sonuc=carpma2(3)
 sonuc=carmpa3(5)
+sonuc=carmpa5(2)
 print(sonuc)
