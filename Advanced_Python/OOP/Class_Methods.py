@@ -5,6 +5,11 @@ class CarItem:
     @classmethod
     def display_item_count(cls):
      return f"{cls.item_count} tane ürün oluşturuldu."
+    
+    @classmethod
+    def creat_item(cls,data_str):
+       name,price,quantity=data_str.split(",")
+       return CarItem(name,price,quantity)
 
     def __init__(self, name, price, quantity):
         self.name = name
@@ -25,5 +30,6 @@ print(CarItem.display_item_count())
 item1 = CarItem("telefon", 50000, 2)
 item2 = CarItem("Bilgisayar", 70000, 1)
 item3 = CarItem("Kitap", 200, 2)
+CarItem.creat_item("mouse,800,8")
 
 print(CarItem.display_item_count())
