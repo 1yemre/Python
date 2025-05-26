@@ -24,6 +24,9 @@ class CarItem:
     def apply_discount(self):
         self.price = self.price * CarItem.discount_rate
 
+     
+        
+
 
 
 item1 = CarItem("telefon", 50000, 2)
@@ -37,24 +40,36 @@ class ShoppingCart:
       def __init__(self,liste):
           self.liste=liste
 
-
       def add_item(self,item):
           self.liste.append(item)
 
       def display_item(self):
           for i in self.liste:
               print(f"{i.name} {i.price}")
+
       def calculate_totals(self):
-          return sum(item.price* item.quantity for item in self.liste)
-     
+          return sum(item.calculate_total() for item in self.liste)
+      
+      def  remove_item(self,Cart_item):
+         self.liste=[item for item in self.liste if item!= Cart_item]
 
+      def clear(self):
+          self.liste=[]
 
+      
 
 
 sc=ShoppingCart([item1,item2])     
 sc.add_item(item3) 
 sc.display_item()
-print(sc.calculate_totals())
+
+# print(sc.calculate_totals())
+# sc.remove_item(item1)
+# sc.display_item()
+# sc.clear()
+# sc.display_item()
+
+
 
 
     
