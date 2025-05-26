@@ -24,9 +24,18 @@ class CarItem:
     def apply_discount(self):
         self.price = self.price * CarItem.discount_rate
 
-     
-        
 
+
+
+class Coupon:
+     def __init__(self,code,discount):
+         self.code=code
+         self.discount=discount
+
+
+C1= Coupon("code1",0.8)
+C2= Coupon("code2",0.7)
+C3= Coupon("code3",0.9)
 
 
 item1 = CarItem("telefon", 50000, 2)
@@ -36,6 +45,11 @@ item3 = CarItem("Kitap", 200, 2)
 
 
 class ShoppingCart:
+      
+      coupon_list=[C1,C2,C3]
+
+
+
     
       def __init__(self,liste):
           self.liste=liste
